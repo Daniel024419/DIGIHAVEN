@@ -1,0 +1,203 @@
+
+
+.top-nav-container nav{
+  
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+  width: 90%;
+  margin: 0 auto;
+  transition: transform 0.2s ease-in-out;
+
+}
+.top-nav-container nav .navbar .logo{
+  font-weight: bold;
+  color: orange;
+  margin-right: 10px;
+}
+.top-nav-container nav .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+    transition: transform 0.2s ease-in-out;
+    padding: 10px;
+    margin: 2% auto;
+}
+
+.top-nav-container nav .navbar .title {
+    font-size: 1.3rem;
+    margin: 1rem;
+    font-weight: normal;
+    text-decoration: none;
+    color: black;
+}
+.top-nav-container nav .search-bar {
+  width: 50%;
+  align-content: center;
+  align-items: center;
+  margin: 0 auto;
+  text-align: center;
+ 
+ 
+}
+.top-nav-container nav .search-bar input {
+  border-radius: 5px;
+  height: 5vh;
+  width: 70%;
+  padding: 15px;
+  background-color: transparent;
+  border: 1px solid rgb(200, 190, 190);
+  margin: 5px;
+  
+
+}
+
+.top-nav-container nav .navbar ul {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    align-items: center;
+}
+
+.top-nav-container nav .navbar ul li {
+   list-style: none;
+}
+.top-nav-container nav .navbar ul li a{
+  text-decoration: none;
+  color: black;
+  font-size: 0.9rem;
+  font-weight: normal;
+}
+.top-nav-container nav .navbar ul li a:hover{
+  color: orange;
+}
+.top-nav-container nav .navbar ul li select{
+  font-weight: normal;
+  background-color: transparent;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-indent: 1px;
+  text-overflow: '';
+}
+.top-nav-container nav .navbar ul li select:hover{
+  color: orange;
+}
+
+.top-nav-container nav .navbar ul li select::-ms-expand {
+  display: none;
+}
+.top-nav-container nav .navbar ul li .notification-bell{
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+.top-nav-container nav .navbar ul li .notification-bell:hover{
+  color: orange;
+}
+.top-nav-container nav .navbar .become-button{
+  border: none;
+  font-size: 1rem;
+}
+
+
+
+.top-nav-container nav .navbar .menu {
+    display: none;
+    position: absolute;
+    top: 0.75rem;
+    right: 0.5rem;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 2.25rem;
+    height: 2rem;
+}
+
+.top-nav-container nav .navbar .menu span {
+    height: 0.4rem;
+    width: 100%;
+    background-color: #000;
+    border-radius: 0.2rem;
+}
+
+
+@media screen and (max-width: 768px) {
+ .top-nav-container nav{
+    box-shadow: none;
+  }
+   .top-nav-container .navbar .menu {
+        display: flex;
+    }
+  .top-nav-container  .navbar .title{
+        margin: 0rem;
+    }
+
+   .top-nav-container .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        box-shadow: none;
+        width: 100%;
+        
+    transition: transform 0.2s ease-in-out;
+    }
+  .top-nav-container  nav .search-bar{
+      width: 80%;
+      margin: 10px auto;
+    }
+  .top-nav-container  nav .search-bar input {
+      width: 100%;
+      height: 1vh;
+
+      text-align: center;
+    }
+
+  .top-nav-container  .navbar ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+
+  .top-nav-container  .navbar ul.open {
+        display: flex;
+    }
+
+   .top-nav-container .navbar ul li {
+        width: 100%;
+        margin-top: 20px;
+        text-align: center;
+    }
+   .top-nav-container .navbar ul li select {
+      text-align: center;
+      margin-top: 1px;
+    }
+    
+
+  
+}
+
+/* Style the select element */
+#selectOption {
+  width: 120px; /* Set the width as needed */
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #fff;
+  border: 1px solid orange;
+}
+
+/* Style the options */
+#selectOption option {
+  padding: 8px;
+}
+
+/* Style the options on hover */
+#selectOption option:hover {
+  background-color: #f0f0f0;
+}
+
+/* Style the selected option */
+#selectOption option:checked {
+  background-color: #e0e0e0;
+  font-weight: bold;
+}

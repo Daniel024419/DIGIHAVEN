@@ -1,0 +1,256 @@
+      .login-view  .container-login {
+            display: flex;
+            background-color: #f2f2f2;
+            border-radius: 8px;
+           box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 2px 0px;
+            flex-direction: row;
+            /* width: 100%; */
+           
+            /* height: 60%; */
+            /* margin-top: 50px; */
+            border-radius: 10px;
+            /* background: #000; */
+            padding: 20px;
+            width: 90%;
+            margin: 5px auto;
+
+        }
+
+
+        .log-con{
+          width: 90%;
+          margin: 0 auto;
+          /* padding: 20rem; */
+      
+        }
+        .log-con .right-me{
+          /* background:#fff; */
+          /* width: 30rem;  */
+        }
+
+
+
+         .login-view .left {
+            flex: 1;
+/* background-image: url('../uploads/bg2.webp'); /* Change to your image URL */
+            background-size: cover;
+            border-radius: 8px 0 0 8px;
+            /* height: 100vh; */
+        }
+
+        .login-view .left img{
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+
+@media (max-width:900px)
+
+{
+  .login-view .left{
+    display: none;
+  }
+  .login-view  .container-login {
+    flex-direction: column;
+    background-color: #fff;
+    box-shadow: none;
+
+
+
+        }
+   .login-view .right {
+
+    margin-top: 30px !important;
+    padding-bottom: 2%;
+    /* background:#fff; */
+    
+    }
+
+}
+       
+
+    
+        .login-view .right {
+            flex: 1;
+            padding: 5px;
+            margin-top: 1%;
+            height: 100%;
+            /* background: #000; */
+        }
+
+        .login-view .login-form {
+            max-width: 300px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+        }
+
+      .login-view  .form-group {
+            margin-bottom: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+       .login-view label {
+            display: block;
+            font-weight: bold;
+        }
+
+       .login-view  .userName,
+       .login-view  .password {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            outline: none;
+        }
+
+     
+
+    
+        .login-view .submit-btn{
+           
+            cursor: pointer;
+            padding: 10px 20px;
+            /* border: 1px solid #ccc; */
+            border-style: solid;
+            border: none;
+            outline: none;
+            border-radius: 5px;
+            outline: none;
+            /* transition: all ease-in-out 0.3s; */
+            margin-bottom: 10px;
+            background-color: #fff;
+        }
+        .login-view .submit-btn:focus{
+           outline: none;
+        }
+        .login-view .submit-btn:hover{
+          background-color: #fe9931;
+          color: #fff;
+        }
+
+        .login-view .login-title{
+
+       text-decoration: underline;
+
+       text-decoration-thickness: 4px;
+
+        }
+
+/*        */
+
+
+.login-alert {
+  padding:12px 10px;
+  background-color: #f44336;
+  color: white;
+  width: 100%;
+  border-radius: 4px;
+  margin-top: 20px;
+  opacity: 1.2;
+}
+
+.login-view .createAc-container{
+
+margin: 30px auto;
+}
+
+.login-view .createAc-container  a {
+
+  background-color: #fff;
+  color: #353535;
+padding: 10px 20px;
+text-decoration: none;
+cursor: pointer;
+font-size: 15px;
+
+border-radius: 10px;
+}
+.login-view .createAc-container  a:hover {
+  background-color: #fe9931;
+  color: #fff;
+padding: 10px 20px;
+text-decoration: none;
+cursor: pointer;
+font-size: 15px;
+
+border-radius: 10px;
+}
+
+.login-view .login-options{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+  }
+
+.login-view .login-options-submit-btn img{
+width: 30px;
+height: 30px;
+border-radius: 500px;
+}
+
+
+ 
+/* CSS */
+.button-60 {
+  align-items: center;
+  appearance: none;
+  background-color: #fff;
+  /* border: 1px solid #dbdbdb; */
+  outline: none;
+  border: none;
+  border-radius: .375em;
+  box-shadow: none;
+  box-sizing: border-box;
+  color: #363636;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: BlinkMacSystemFont,-apple-system,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 1rem;
+  height: 2.5em;
+  justify-content: center;
+  line-height: 1.5;
+  padding: calc(.5em - 1px) 1em;
+  position: relative;
+  text-align: center;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: top;
+  white-space: nowrap;
+  display: flex;
+            flex-direction: row;
+            gap: 10px;
+            padding:auto 10px;
+}
+
+.button-60:active {
+  border-color: #4a4a4a;
+  outline: 0;
+}
+
+.button-60:focus {
+  border-color: #fe9931;
+  outline: 0;
+}
+
+.button-60:hover {
+  border-color: #b5b5b5;
+}
+
+.button-60:focus:not(:active) {
+  box-shadow: rgba(72, 95, 199, .25) 0 0 0 .125em;
+}
+
+.login-view  a{
+text-decoration: none;
+color: #353535;
+}
+.login-view  a:hover{
+text-decoration: none;
+color: #fe9931;
+}

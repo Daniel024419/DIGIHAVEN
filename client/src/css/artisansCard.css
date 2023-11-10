@@ -1,0 +1,64 @@
+.artisans-card-container{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* gap: 1rem; */
+    /* padding: 3% 5%; */
+    width: 90%;
+    margin: 0 auto;
+    margin-top: -5rem;
+    overflow-x: scroll;
+    padding-bottom: 20px;
+    padding-left: 4rem;
+
+}
+
+.artisans-card-container .artisans-card-bottom{
+    overflow-x: hidden;
+    /* background: #000; */
+    padding: 0 10px;
+    /* width: 95%; */
+}
+
+.artisans-card-container::-webkit-scrollbar{
+    width: 10px;
+    height: 10px;
+}
+.artisans-card-container::-webkit-scrollbar-track{
+   background: #fff
+}
+.artisans-card-container::-webkit-scrollbar-thumb{
+    background: #fff
+}
+
+ .artisans-card-header{
+    width: 90%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 20px 0;
+    color: #000;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    margin: 0 auto;
+    padding-left: 20px;
+    
+}
+
+.artisans-card-container .artisans-card-list{
+    /* width: 100%; */
+    display: flex;
+    /* flex-wrap: wrap; */
+    /* justify-content: center; */
+    gap: 2rem;
+    /* background: #000; */
+    overflow: hidden;
+    margin-top: 5rem;
+    padding: 10px 5px;
+}
+
+
+.slick-prev:before, .slick-next:before{
+    color: #000 !important;
+}

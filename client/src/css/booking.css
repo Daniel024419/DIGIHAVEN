@@ -1,0 +1,128 @@
+.booking-form-container{
+    width: 90%;
+    margin: 1rem auto;
+    transition: all ease-in 0.3s;
+}
+
+.booking-form-heading{
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 5px;
+    /* text-align: center; */
+    text-transform: uppercase;
+
+}
+.booking-form-container .booking-form{
+    /* background: #000; */
+    display: flex;
+    gap: 20px;
+    /* justify-content: space-between; */
+    flex-direction: row;
+}
+
+.booking-form .booking-form-image{
+width: 50%;
+background: #000;
+}
+
+.booking-form-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+} 
+
+.booking-form-container form{
+    width: 35%;
+    margin: 10px auto;
+}
+.booking-form-fields{
+    /* width: 30%; */
+    /* margin: 4px auto; */
+    /* background: #000; */
+    margin-top: 12%;
+}
+
+.booking-form-fields .input-field{
+    display: flex;
+    flex-direction: column;
+ 
+}
+.input-field label{
+    font-size: 12px;
+    font-weight: 500;
+    color: #2e2e2e;
+}
+.input-field input{
+    outline: none;
+    font-size: 14px;
+    font-weight: 400;
+    color: #333;
+    border-radius: 5px;
+    border: 1px solid #aaa;
+    padding: 0 15px;
+    height: 42px;
+    margin: 8px 0;
+}
+.input-field input :focus{
+    box-shadow: 0 3px 6px rgba(0,0,0,0.13);
+}
+
+.input-field select:focus{
+    box-shadow: 0 3px 6px rgba(0,0,0,0.13);
+}
+
+.input-field input[type="date"]{
+    color: #707070;
+}
+.input-field input[type="date"]:valid{
+    color: #333;
+}
+.input-field input[type="time"]{
+    color: #707070;
+}
+.input-field input[type="time"]:valid{
+    color: #333;
+}
+
+ .booking-form-container form button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 45px;
+    /* max-width: 200px; */
+    width: 100%;
+    border: none;
+    outline: none;
+    color: #fff;
+    border-radius: 5px;
+    margin: 25px 0;
+    background-color: #fe9931;
+    transition: all 0.3s linear;
+    cursor: pointer;
+}
+.booking-form-container form .btnText{
+    font-size: 14px;
+    font-weight: 400;
+}
+.booking-form-container form button:hover{
+    background-color: #f4871a;
+}
+
+
+@media (max-width:900px){
+.booking-form-container .booking-form{
+    flex-direction: column-reverse;
+}
+.booking-form-image img , .booking-form-image{
+  display: none;
+} 
+
+/*.input-field input{
+width: 300px;
+}*/
+
+.booking-form-container form{
+    width: 90%;
+}
+}

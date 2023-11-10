@@ -1,0 +1,136 @@
+.artisan-profile {
+  width: 90%;
+  margin: 0% auto;
+  padding: 20px;
+  text-align: center;
+}
+.artisan-profile .profile-header h2 {
+  font-size: 1.5rem;
+  font-weight: normal;
+}
+.artisan-profile .profile-header p {
+  color: #979493;
+  font-size: 0.8rem;
+}
+
+/* Responsive styles for screens with a maximum width of 768px */
+@media (max-width: 768px) {
+  .artisan-profile {
+    width: 100%;
+    margin: 10% auto;
+    padding: 20px;
+  }
+}
+.artisan-profile .profile-header {
+  text-align: center;
+}
+.artisan-profile .profile-picture {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.artisan-profile .services {
+  margin-top: 50px;
+  text-align: center;
+}
+.artisan-profile .service-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  height: 40vh;
+  width: 80%;
+  margin: 3% auto;
+}
+
+/* Responsive styles for screens with a maximum width of 768px */
+@media (max-width: 768px) {
+ .artisan-profile .service-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    height: auto;
+    width: 90%;
+    margin: 2% auto;
+  }
+}
+
+.artisan-profile .service-image {
+  width: 100%;
+  height: 40vh;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Responsive styles for screens with a maximum width of 768px */
+@media (max-width: 768px) {
+ .artisan-profile .service-image {
+    height: auto;
+  }
+}
+.artisan-profile .buttons {
+  margin-top: 20px;
+}
+
+.artisan-profile .book-button,
+.artisan-profile .call-button {
+  margin: 5px;
+  padding: 10px 20px;
+  color: white;
+  border: none;
+  border-radius: 100px;
+  cursor: pointer;
+  background-color: rgb(54, 31, 76);
+}
+
+.book-button:hover,
+.call-button:hover {
+  background-color: orangered;
+}
+
+/* Add your keyframes animations and their related classes here */
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-20px);
+  }
+  60% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes slide-in {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.animated-fade-in {
+  animation: fade-in 0.5s;
+}
+
+.animated-bounce {
+  animation: bounce 1s;
+}
+
+.animated-slide-in {
+  animation: slide-in 0.5s;
+}

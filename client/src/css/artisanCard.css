@@ -1,0 +1,81 @@
+.artisan-card{
+    /* background: #fe9931; */
+    background: #fff;
+    width: 18.5rem;
+    height: 18rem;
+    padding: 20px 0;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 9px 0px;
+    
+}
+
+.artisan-card .artisan-card-upper{
+    width: 100%;
+    height: 60%;
+    /* height: 100%; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.artisan-card-upper img{
+    width: 70%;
+    height: 100%;
+    margin: 0 auto;
+    object-fit: contain;
+}
+
+.artisan-card .artisan-card-middle{
+    
+    display: flex;
+    flex-direction: column;
+    padding-top: 10px;
+    align-items: center;
+    justify-content: center;
+    /* text-align: center; */
+    width: 70%;
+}
+
+.artisan-card-middle h3{
+    font-size: 1.2rem;
+    text-transform: capitalize;
+}
+.artisan-card-middle p{
+    font-size: 0.8rem;
+    padding: 10px 0;
+}
+.artisan-card-bottom{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0;
+    
+}
+.artisan-card-bottom button{
+   border: none;
+   outline: none;
+   background: #fe9931;
+   /* background: #fff; */
+   padding: 5px 10px;
+   border-radius: 10px;
+   cursor: pointer;
+   color: #fff;
+   margin: 0 3px;
+   font-size: 0.7rem;
+   
+}
+.artisan-card-bottom button:hover{
+   background: #f1f1f1;
+   color: #000;
+}
+
+.swal-button {
+    background: #fe9931 !important;
+}
+
+

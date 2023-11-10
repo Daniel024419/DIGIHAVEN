@@ -1,0 +1,77 @@
+.serviceFormContainer {
+  max-width: 80%;
+  margin: 20px auto;
+  padding: 50px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  animation: fadeInUp 0.5s ease-in-out;
+}
+
+.serviceFormContainer .formContainer Form {
+  width: 100%;
+
+}
+.serviceFormContainer .form-group {
+  margin: 0 auto;
+  border: 1px;
+  width: 100%;
+  
+}
+
+.serviceFormContainer label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  font-size: 0.8rem;
+  font-weight: normal;
+}
+
+.serviceFormContainer input, .serviceFormContainer  select , .serviceFormContainer  button,
+.serviceFormContainer textarea {
+  width: 100%;
+  padding: 8px;
+  font-size: 16px;
+  margin-bottom: 20px;
+  border: 1px solid #d3cfcf;
+  border-radius: 4px;
+  background-color: rgb(246, 247, 255);
+}
+.serviceFormContainer input,
+textarea::placeholder {
+  font-size: 0.8rem;
+}
+
+.serviceFormContainer .formContainer button {
+  background-color: orange;
+  color: #fff;
+  padding: 10px 15px;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 60%;
+  margin: 20px auto;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.serviceFormContainer button:hover {
+  background-color: orangered;
+}
+
+.serviceFormContainer .error {
+  color: #ff0000;
+  font-size: 14px;
+  margin-top: 4px;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

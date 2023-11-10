@@ -1,0 +1,37 @@
+.transaction-table-container {
+  width: 80%;
+  margin: 5% auto;
+  text-align: center;
+  padding: 30px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+.transactionTableHeader {
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
+  margin: 5% auto;
+}
+.transaction-table h3{
+    
+  font-weight: normal;
+}
+.transactionTableHeader .trans-btn {
+  width: 10%;
+  height: 7vh;
+}
+.transactionTableHeader .filters {
+  width: 60%;
+}
+.transaction-table .dates {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+  margin: 5% auto;
+  
+  font-size: 0.8rem
+}
+.transaction-table .dates input{
+    width: 80%;
+    height: 5vh;
+
+}

@@ -1,0 +1,261 @@
+.create-artisan-container .container{
+    position: relative;
+    /* max-width: 900px; */
+    width: 90%;
+    margin: 40px auto;
+    border-radius: 6px;
+    padding: 30px;
+    /* margin: 0 15px; */
+    background-color: #fff;
+   box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+    /* overflow-y: auto; */
+}
+.create-artisan-container .container h1{
+    position: relative;
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+}
+.create-artisan-container .container h1::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    height: 3px;
+    width: 27px;
+    border-radius: 8px;
+    background-color: #fe9931;
+}
+.create-artisan-container .container form{
+    position: relative;
+    margin-top: 30px;
+    min-height: 490px;
+    /* min-height: auto; */
+    /* background-color: red; */
+    overflow: auto;
+    /* padding: 0 10px; */
+    width: 100%;
+    
+  
+
+}
+.create-artisan-container .container form .first{
+   padding: 0 10px;
+   display: flex;
+   justify-content: space-between;
+   /* background: #000; */
+}
+
+.create-artisan-container .container form .first .personal{
+    padding: 0 10px;
+    /* display: flex;
+    flex-direction: column; */
+    width: 30rem;
+    
+ }
+.container form::-webkit-scrollbar-thumb{
+    background-color: #aaa;
+    /* border-radius: 5px; */
+    
+}
+.create-artisan-container .container form::-webkit-scrollbar-track{
+    background-color: #ccc;
+    
+}
+.create-artisan-container .container form .form{
+    /* position: absolute; */
+    background-color: #fff;
+    transition: 0.3s ease;
+}
+.create-artisan-container .container form .title{
+    display: block;
+    margin-bottom: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    margin: 6px 0;
+    color: #333;
+}
+.create-artisan-container .container form .fields{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 100%;
+    /* background: #000; */
+}
+.create-artisan-container form .fields .input-field{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    margin: 4px 0;
+}
+.create-artisan-container .input-field label{
+    font-size: 12px;
+    font-weight: 500;
+    color: #2e2e2e;
+}
+.create-artisan-container .input-field input{
+    outline: none;
+    font-size: 14px;
+    font-weight: 400;
+    color: #333;
+    border-radius: 5px;
+    border: 1px solid #aaa;
+    padding: 0 15px;
+    height: 42px;
+    margin: 8px 0;
+}
+ .create-artisan-container .input-field input :focus{
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+}
+
+ .create-artisan-container .input-field select:focus{
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+}
+.create-artisan-container .input-field select,
+.create-artisan-container .input-field input[type="date"]{
+    color: #707070;
+}
+
+.create-artisan-container .input-field-select-container{
+    display: flex;
+    width: 100%;
+    margin: 4px 0;
+    /* background: #000; */
+    gap: 2px;
+
+}
+
+
+.create-artisan-container select{
+    outline: none;
+    font-size: 14px;
+    font-weight: 400;
+    color: #333;
+    border-radius: 5px;
+    border: 1px solid #aaa;
+    padding: 0 15px;
+    height: 42px;
+    margin: 8px 0px;
+    width: 100%;
+}
+
+.create-artisan-container .input-field-error{
+    font-size: 0.8rem;
+    color: #fe3131;
+    margin-bottom: 5px;
+}
+
+.create-artisan-container .container form button, .backBtn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 45px;
+    /* max-width: 200px; */
+    width: 100%;
+    border: none;
+    outline: none;
+    color: #fff;
+    border-radius: 5px;
+    margin: 25px 0;
+    background-color: #fe9931;
+    transition: all 0.3s linear;
+    cursor: pointer;
+}
+.create-artisan-container .container form .btnText{
+    font-size: 14px;
+    font-weight: 400;
+}
+.create-artisan-container form button:hover{
+    background-color: #fe9931;
+}
+/* form button i,
+form .backBtn i{
+    margin: 0 6px;
+}
+form .backBtn i{
+    transform: rotate(180deg);
+} */
+.create-artisan-container form .buttons{
+    display: flex;
+    align-items: center;
+}
+.create-artisan-container form .buttons button , .backBtn{
+    margin-right: 14px;
+}
+
+
+.create-artisan-container .profile-icon{
+    /* background: #000; */
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+.create-artisan-container .profile-icon-upload {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    border: 5px solid #eee;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+.create-artisan-container  .profile-icon-upload img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+  
+.create-artisan-container  .upload-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 100px;
+    background-color: #ccc;
+    border-radius: 50%;
+    text-align: center;
+    cursor: pointer;
+  }
+  
+ .create-artisan-container .upload-button label {
+    display: block;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #666;
+  }
+  
+ .create-artisan-container .upload-button input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+@media (max-width: 750px) {
+ .create-artisan-container   .container form{
+        overflow-y: scroll;
+    }
+
+ .create-artisan-container   .container form .first{
+       flex-direction: column;
+     }
+    .create-artisan-container .container form::-webkit-scrollbar{
+       display: none;
+    }
+    form .fields .input-field{
+        /* width: calc(100% / 2 - 15px); */
+    }
+}
+
+@media (max-width: 550px) {
+    form .fields .input-field{
+        width: 100%;
+    }
+}
