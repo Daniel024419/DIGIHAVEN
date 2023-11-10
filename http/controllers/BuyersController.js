@@ -96,7 +96,7 @@ const CreateBuyer = async (req, res, next) => {
     if (error) {
       logger.log('error', "can not create buyer account /  internal error", error);
       res.status(501).json({ message: "Internal error... " });
-    
+
     }
   }
 
@@ -105,7 +105,7 @@ const CreateBuyer = async (req, res, next) => {
 
 
 
-const DeleteBuyer = async (req , res , next )=>{
+const DeleteBuyer = async (req, res, next) => {
 
   const buyerId = req.params.buyerId;
 
@@ -118,15 +118,15 @@ const DeleteBuyer = async (req , res , next )=>{
 
     //fetching user password,empty
     const users_del = await collection.deleteOne({ buyerId: buyerId });
-  
+
     if (users_del.deletedCount === 1) {
 
       res.status(200).json({ message: "Buyer deleted successfully..", statusCode: 200 });
- 
+
     } else {
 
       res.status(200).json({ message: "Failed deleting buyer....", statusCode: 501 });
- 
+
     }
 
   }
@@ -141,5 +141,5 @@ const DeleteBuyer = async (req , res , next )=>{
 module.exports = {
   buyers: buyers,
   CreateBuyer: CreateBuyer,
-  DeleteBuyer:DeleteBuyer,
+  DeleteBuyer: DeleteBuyer,
 };

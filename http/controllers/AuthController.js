@@ -381,78 +381,80 @@ const BuyerAuth = async (req, res, next) => {
 
 //google auth
 
-const googleUthCallback = async (req, res)  =>{
+const googleUthCallback = async (req, res) => {
   const email = req.user.emails[0].value;
-  
-  
-    try {
-   
-      //query
-      db = await connectToDB();
-  
-      const collection = db.collection('users');
-  
-      const userData = await collection.findOne({
-        $or: [
-          { usermail: email },
-        ],
-       
-      });
-  //user found
-  if (userData) {
-  
-  // User information you want to include in the JWT payload
-  const user_token = {
-    userID: userData.userID,
-    username: userData.username,
-  };
-    // Generate a JWT
-    const token = jwt.sign(user_token, secretKey, { expiresIn: '24h' }); // '1h' means the token expires in 24 hours
-  
-     User_Session.userID=userData.userID;
-     User_Session.username=userData.username;
-     User_Session.profile=userData.profile;
-     User_Session.created_at=userData.created_at;
-     User_Session.updated_at=userData.updated_at;
-     User_Session.usermail=userData.usermail;
-     User_Session.role=userData.role;
-     User_Session.tel=userData.tel;
-     User_Session.last_visit=userData.last_visit;
-     req.session.Authenticated = true;
-     req.session.User = User_Session;
-     
-   //fetching user by auth
-        await collection.updateOne(
+
+
+  try {
+
+    //query
+    db = await connectToDB();
+
+    const collection = db.collection('users');
+
+    const userData = await collection.findOne({
+      $or: [
+        { usermail: email },
+      ],
+
+    });
+    //user found
+    if (userData) {
+
+      // User information you want to include in the JWT payload
+      const user_token = {
+        userID: userData.userID,
+        username: userData.username,
+      };
+      // Generate a JWT
+      const token = jwt.sign(user_token, secretKey, { expiresIn: '24h' }); // '1h' means the token expires in 24 hours
+
+      User_Session.userID = userData.userID;
+      User_Session.username = userData.username;
+      User_Session.profile = userData.profile;
+      User_Session.created_at = userData.created_at;
+      User_Session.updated_at = userData.updated_at;
+      User_Session.usermail = userData.usermail;
+      User_Session.role = userData.role;
+      User_Session.tel = userData.tel;
+      User_Session.last_visit = userData.last_visit;
+      req.session.Authenticated = true;
+      req.session.User = User_Session;
+
+      //fetching user by auth
+      await collection.updateOne(
         //find user with id
-        { userID : userData.userID},
+        { userID: userData.userID },
         //update user profile with the new file name...
-        { $set: { 
-  
-          status : 1,
-          last_visit:Date(),
-  
-  
-        }}
-        );
-  
-  // Encrypt the data and create a token
-  //URL_REDIRECT back to client
-  const data_token = jwt.sign({userData , message:"Authenticated as "+email ,token,statusCode:200}, secretKey);
-  
-  
-  res.redirect(`${process.env.SERVER_APP_URL_REDIRECT_CLIENT}/auth/google/callback?data_token=${data_token}`);
-  //res.redirect(`${process.env.SERVER_APP_URL_REDIRECT_CLIENT_PRO}/auth/google/callback?data_token=${data_token}`);
-  
-  }else{
-  res.status(200).json({message : "User not found.. ",statusCode:404});
+        {
+          $set: {
+
+            status: 1,
+            last_visit: Date(),
+
+
+          }
+        }
+      );
+
+      // Encrypt the data and create a token
+      //URL_REDIRECT back to client
+      const data_token = jwt.sign({ userData, message: "Authenticated as " + email, token, statusCode: 200 }, secretKey);
+
+
+      res.redirect(`${process.env.SERVER_APP_URL_REDIRECT_CLIENT}/auth/google/callback?data_token=${data_token}`);
+      //res.redirect(`${process.env.SERVER_APP_URL_REDIRECT_CLIENT_PRO}/auth/google/callback?data_token=${data_token}`);
+
+    } else {
+      res.status(200).json({ message: "User not found.. ", statusCode: 404 });
+    }
+
+  } catch (error) {
+    logger.log('error', "authenticating error /  internal error", error);
+
   }
-  
-  }catch(error){
-  logger.log('error',"authenticating error /  internal error", error);
-  
-  }
-  }
- //  
+}
+//  
 
 //logout
 const logout = async (req, res, next) => {

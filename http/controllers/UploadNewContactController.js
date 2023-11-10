@@ -39,7 +39,7 @@ const AddContact = async (req, res, next) => {
     try {
 
 
-        console.log("contact")
+        
         db = await connectToDB();
         const collection = db.collection('contacts');
         const {
@@ -56,7 +56,7 @@ const AddContact = async (req, res, next) => {
             lname: lname,
             usermail: usermail,
             tel: tel,
-            created_at:formattedDate,
+            created_at: formattedDate,
         };
         //results
         const results = await collection.insertOne(newContact);
@@ -68,7 +68,7 @@ const AddContact = async (req, res, next) => {
 
     } catch (error) {
         logger.log('error', '[' + Date() + '] can not add contact / Internal error' + error)
-        console.log(error)
+        //console.log(error)
     }
 }
 

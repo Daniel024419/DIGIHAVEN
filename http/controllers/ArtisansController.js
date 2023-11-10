@@ -24,7 +24,7 @@ const artisans = async (req, res, next) => {
     const collection = db.collection('artisans');
 
     const artisans = await collection.find({}).toArray();
-    
+
 
     if (artisans.length === 0) {
 
@@ -214,10 +214,10 @@ const CreateArtisan = async (req, res, next) => {
       work_days_from,
       work__days_end,
       other_tel,
-      tel,occupation,
+      tel, occupation,
     } = req.body.formData;
- //Get the uploaded file name
- const fileName = req.file.originalname;
+    //Get the uploaded file name
+    const fileName = req.file.originalname;
 
     // Function to hash the password
     const hashPassword = async (password) => {
@@ -238,10 +238,10 @@ const CreateArtisan = async (req, res, next) => {
       created_by: created_by,
       last_visit: formattedDate,
       updated_at: formattedDate,
-      work_days_from:work_days_from,
-      work__days_end:work__days_end,
-      other_tel:other_tel,
-      occupation:occupation,
+      work_days_from: work_days_from,
+      work__days_end: work__days_end,
+      other_tel: other_tel,
+      occupation: occupation,
       status: 0,
 
     };
@@ -261,7 +261,7 @@ const CreateArtisan = async (req, res, next) => {
     if (error) {
       logger.log('error', "can not create artisan account /  internal error", error);
       res.status(501).json({ message: "internal error... " + error, statusCode: 501 });
-     console.log(error)
+       
     }
   }
 
@@ -273,7 +273,7 @@ const CreateArtisan = async (req, res, next) => {
 const fetchArtisansId = async (req, res, next) => {
 
 
-    const artisanId = req.params.artisanId;
+  const artisanId = req.params.artisanId;
   try {
 
 
@@ -282,8 +282,8 @@ const fetchArtisansId = async (req, res, next) => {
 
     const collection = db.collection('artisans');
 
-    const artisans = await collection.find({artisanId:artisanId}).toArray();
-    
+    const artisans = await collection.find({ artisanId: artisanId }).toArray();
+
 
     if (artisans.length === 0) {
 
@@ -309,6 +309,6 @@ module.exports = {
   VerifyArtisans: VerifyArtisans,
   deleteArtisan: deleteArtisan,
   CreateArtisan: CreateArtisan,
-  fetchArtisansId:fetchArtisansId
- 
+  fetchArtisansId: fetchArtisansId
+
 };

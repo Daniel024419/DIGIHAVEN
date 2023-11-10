@@ -128,17 +128,16 @@ const AddbookServices = async (req, res, next) => {
 
 
       //send sms
-      const message = 'Hello ' + created_by + ', Your home services booking was success. Details Schedule Time : ' + schedule_time + ' Schedule_date : ' + schedule_date + ' location :' + 'Location' + SERVER_NAME;
+      const message = 'Hello ' + created_by + ', Your home services booking was success. Details Schedule Time : ' + schedule_time + ' Schedule_date : ' + schedule_date + ' location :' + location+' '+ SERVER_NAME;
       // Construct the API URL
       const apiUrl = `https://apps.mnotify.net/smsapi?key=${MNOTIFY_API_KEY}
 &to=${tel}&msg=${message}&sender_id=${SENDER_ID}`;
       // Send the SMS
       axios.get(apiUrl).then(response => {
-        console.log('SMS sent successfully' + tel);
-        console.log(response.data); // Optional: Log the API response
+       
       }).catch(error => {
         logger.log('error', '[' + Date() + 'Failed to send unique code SMS:', error);
-        console.log(error)
+       
       });
 
       //mail
@@ -215,7 +214,7 @@ const AddbookServices = async (req, res, next) => {
     if (error) {
       logger.log('error', "can not create booking.. /  internal error", error);
       res.status(501).json({ message: "Internal error... " });
-      console.log(error);
+      
     }
   }
 

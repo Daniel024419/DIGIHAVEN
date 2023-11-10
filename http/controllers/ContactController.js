@@ -2,8 +2,8 @@ const { connectToDB, closeDB } = require('../../config/mongodbconfig');
 const logger = require('../../logger');
 let db;
 
-const addContact = async ( req, res ,next)=>{
-// Create a new Date object
+const addContact = async (req, res, next) => {
+  // Create a new Date object
   var currentDate = new Date();
 
   // Get the day, month, and year
@@ -15,12 +15,12 @@ const addContact = async ( req, res ,next)=>{
   var formattedDate = day + '/' + month + '/' + year;
 
 
-try {
-db = await connectToDB();
+  try {
+    db = await connectToDB();
     const collection = db.collection('contacts');
 
     const {
-      
+
       usermail,
       lname,
       fname,
@@ -29,17 +29,17 @@ db = await connectToDB();
       message,
     } = req.body.formData;
 
-    
 
-const newContact ={
-	contactId: Date.now() ,
-	usermail: usermail,
-    fname: fname,
-    lname: lname,
-    message: message,
-    phone: phone,
-    created_at:formattedDate,
-}
+
+    const newContact = {
+      contactId: Date.now(),
+      usermail: usermail,
+      fname: fname,
+      lname: lname,
+      message: message,
+      phone: phone,
+      created_at: formattedDate,
+    }
 
     //results
     const results = await collection.insertOne(newContact);
@@ -50,20 +50,20 @@ const newContact ={
     }
 
 
-}
-catch(error){
-if (error) {
+  }
+  catch (error) {
+    if (error) {
       logger.log('error', "can not create contact /  internal error", error);
       res.status(501).json({ message: "Internal error... " });
-   }
+    }
 
-   console.log(error)
-}
+     
+  }
 }
 
 
 module.exports = {
 
-	addContact:addContact,
+  addContact: addContact,
 
 };

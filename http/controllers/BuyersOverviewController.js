@@ -13,7 +13,7 @@ const fetchActiveBuyers = async (req, res, next) => {
 		//fetching user password,empty
 		const Buyers = await collection.find({ status: 1 }).toArray();
 
-        console.log(Buyers)
+		console.log(Buyers)
 		res.json({ total: Buyers.length });
 
 

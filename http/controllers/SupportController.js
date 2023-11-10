@@ -110,7 +110,7 @@ const AddSuport = async (req, res, next) => {
         if (error) {
             logger.log('error', "can not create user account /  internal error", error);
             res.status(501).json({ message: "Internal error... " });
-            console.log(error)
+            
 
         }
     }

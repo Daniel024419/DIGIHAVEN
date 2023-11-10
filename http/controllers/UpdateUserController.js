@@ -291,14 +291,7 @@ const EditUserProfile = async (req, res, next) => {
     res.status(200).json({ message: "Editing failed , Please try again ", statusCode: 501 });
 
   }
-  //close db con
-  // finally {
-  //     if (db) {
-  //      closeDB();
-  //     }
-
-  //   }
-
+ 
 
 }
 

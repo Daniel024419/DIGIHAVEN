@@ -77,11 +77,6 @@ const AddUser = async (req, res, next) => {
     }
   }
 
-  // finally{
-  // 	if (db) {
-  //      closeDB();
-  //     }
-  // }
 
 
 }

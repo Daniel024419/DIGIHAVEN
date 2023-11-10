@@ -175,7 +175,7 @@ passport.use(new GoogleStrategy({
   clientSecret: process.env.CLIENT_SECRET_LOGIN,
 
   //developing
-  callbackURL: process.env.SERVER_APP_URL_CALLBACK_DEV+'/auth/callback',
+  callbackURL: process.env.SERVER_APP_URL_CALLBACK_DEV + '/auth/callback',
 
   //production
   //callbackURL: process.env.SERVER_APP_URL_CALLBACK_PRO + '/auth/callback',
@@ -267,7 +267,7 @@ app.get('/auth/fetch-feebacks', FeedBackController.feedbacks);
 
 app.get('/auth/fetch-buyers', BuyersController.buyers);
 app.post('/auth/create-buyer', upload.single("file"), BuyersController.CreateBuyer);
-app.delete('/auth/delete-buyer/:buyerId',BuyersController.DeleteBuyer);
+app.delete('/auth/delete-buyer/:buyerId', BuyersController.DeleteBuyer);
 
 app.get('/auth/fetch-buyers/active', BuyersOverviewController.fetchActiveBuyers);
 app.get('/auth/fetch-buyers/inactive', BuyersOverviewController.fetchInActiveBuyers);
@@ -314,23 +314,23 @@ app.post('/auth/make-payment', PaymentApiController.PaystackApi);
 app.post('/auth/paystack/payment/callback', PaymentApiController.PaystackApiCallback);
 
 
-app.post('/auth/upload-contact',upload.single("file"), ContactController.addContact);
+app.post('/auth/upload-contact', upload.single("file"), ContactController.addContact);
 //app.post('/auth/paystack/payment/callback', PaymentApiController.PaystackApiCallback);
 
 //book service
 //BookServiceController
-app.post('/auth/book-services',upload.single("file"), BookServiceController.AddbookServices);
+app.post('/auth/book-services', upload.single("file"), BookServiceController.AddbookServices);
 app.get('/auth/booked-services', BookServiceController.BookedServices);
-app.post('/auth/update-booked-services',upload.single("file"), BookServiceController.UpdateBookedServices);
+app.post('/auth/update-booked-services', upload.single("file"), BookServiceController.UpdateBookedServices);
 app.get('/auth/cancel-booked-services/:bookingId', BookServiceController.CancelBookedServices);
 app.get('/auth/delete-booked-services/:bookingId', BookServiceController.DeleteBookedServices);
 
 
 
-app.post('/auth/add-platform-feedback',upload.single("file"), FeedBackController.feedbacks);
+app.post('/auth/add-platform-feedback', upload.single("file"), FeedBackController.feedbacks);
 //platformdashboard
 // ArtisansPlatformDashboardController
-app.post('/auth/artisan-create-services',upload.single("file"), ArtisansPlatformDashboardController.createServiceArtisan);
+app.post('/auth/artisan-create-services', upload.single("file"), ArtisansPlatformDashboardController.createServiceArtisan);
 
 //logout
 app.get('/logout/users', AuthController.logout);

@@ -32,7 +32,7 @@ const bookingsCategory = async (req, res, next) => {
         // const collection = db.collection('bookings');
 
         // const bookings = await collection.find().toArray();
-       
+
         // res.json(bookings);
 
         db = await connectToDB();
@@ -62,7 +62,7 @@ const bookingsCategory = async (req, res, next) => {
 
 //         const bookings = await collection.find({type}).toArray();
 //     } catch (error) {
-        
+
 //     }
 // }
 
@@ -203,7 +203,7 @@ const bookingsPendingBuyer = async (req, res, next) => {
 
 const DashboardBookingAll = async (req, res, next) => {
 
-const buyerId = req.params.buyerId;
+    const buyerId = req.params.buyerId;
 
 
     const artisanId = req.params.artisanId;
@@ -214,7 +214,7 @@ const buyerId = req.params.buyerId;
 
         const collection = db.collection('bookings');
 
-        const bookings = await collection.find({ artisanId: artisanId}).toArray();
+        const bookings = await collection.find({ artisanId: artisanId }).toArray();
         res.json(bookings);
 
     }
@@ -228,7 +228,7 @@ const buyerId = req.params.buyerId;
 
 module.exports = {
     Services: Services,
-    bookingsCategory:bookingsCategory,
+    bookingsCategory: bookingsCategory,
     bookingsCompleted: bookingsCompleted,
     bookingsCancelled: bookingsCancelled,
     bookingsPending: bookingsPending,
@@ -237,7 +237,7 @@ module.exports = {
     bookingsCancelledBuyer: bookingsCancelledBuyer,
     bookingsPendingBuyer: bookingsPendingBuyer,
     bookingsCompletedBuyer: bookingsCompletedBuyer,
-    DashboardBookingAll:DashboardBookingAll,
+    DashboardBookingAll: DashboardBookingAll,
 
 
 
