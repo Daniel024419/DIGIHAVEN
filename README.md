@@ -16,11 +16,11 @@ buyer@gmail.com
 Daniel024419
 
 
-swal("Write something here:", {
-  content: "input",
-})
-.then((value) => {
-  swal(`You typed: ${value}`);
-});
+run client
+npm install
+
+run client 
+nodemon or npm start
+
 
 
