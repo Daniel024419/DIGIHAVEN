@@ -24,3 +24,7 @@ nodemon or npm start
 
 
 
+//
+danielpmensah926@gmail.com
+pass : Daniel024419
+

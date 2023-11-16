@@ -10,7 +10,7 @@ const FilterCategory = ({ type, img, artisanId, serviceId }) => {
 
     localStorage.setItem("serviceId-book", serviceId);
     localStorage.setItem("artisanId-book", artisanId);
-
+    
     window.location.href = "/auth/customer/book-service";
     // navigate("/auth/customer/book-service");
   };

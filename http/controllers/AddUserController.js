@@ -55,7 +55,6 @@ const AddUser = async (req, res, next) => {
       last_visit: formattedDate,
       updated_at: formattedDate,
       status: 0,
-
     };
 
 
