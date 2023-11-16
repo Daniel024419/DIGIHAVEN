@@ -61,10 +61,10 @@ import { Link } from 'react-router-dom';
   const handleLoginWithGoogle = () => {
 
     //dev
-    window.location.href = process.env.REACT_APP_API_URL_DEV + '/google/auth';
+    //window.location.href = process.env.REACT_APP_API_URL_DEV + '/google/auth';
 
     //pro
-    //window.location.href = process.env.REACT_APP_API_URL_PRO + '/google/auth';
+    window.location.href = process.env.REACT_APP_API_URL_PRO + '/google/auth';
 
   };
 

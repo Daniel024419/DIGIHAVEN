@@ -128,7 +128,7 @@ const AddbookServices = async (req, res, next) => {
 
 
       //send sms
-      const message = 'Hello ' + created_by + ', Your home services booking was success. Details Schedule Time : ' + schedule_time + ' Schedule_date : ' + schedule_date + ' location :' + location+' '+ SERVER_NAME;
+      const message = 'Hello ' + created_by + ', Your home services booking was success. Details Schedule Time : ' + schedule_time + ' Schedule_date : ' + schedule_date + ' location : ' + location+' ->'+ SERVER_NAME;
       // Construct the API URL
       const apiUrl = `https://apps.mnotify.net/smsapi?key=${MNOTIFY_API_KEY}
 &to=${tel}&msg=${message}&sender_id=${SENDER_ID}`;
