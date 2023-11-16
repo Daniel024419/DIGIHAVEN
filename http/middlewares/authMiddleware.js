@@ -18,11 +18,11 @@ AuthMiddleware = async  (req, res, next) => {
         }
     }
      
-    // Check if the user is authenticated (using session or any other method)
+    // Check if the user is authenticated (using session)
     if (!isAuthenticated()) {
-      // User is not authenticated, redirect to login page or send an unauthorized response
+      // User is not authenticated,  send an unauthorized response
       res.status(401).json({message : 'Unauthorized Access'}); 
-      // Or you can send an unauthorized response:
+      //  can send an unauthorized response:
        //res.status(401).send('Unauthorized');
     }
 

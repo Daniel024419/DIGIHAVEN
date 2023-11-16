@@ -6495,3 +6495,9 @@ error: [Fri Nov 10 2023 15:11:20 GMT+0100 (Central European Standard Time)]Error
 error: [Fri Nov 10 2023 15:37:43 GMT+0100 (Central European Standard Time)] Network Error getting access token,net not conncted or Error: invalid_grant
 error: [Fri Nov 10 2023 15:37:54 GMT+0100 (Central European Standard Time)] Network Error getting access token,net not conncted or Error: invalid_grant
 error: [Fri Nov 10 2023 16:05:33 GMT+0100 (Central European Standard Time)] Network Error getting access token,net not conncted or Error: invalid_grant
+error: [Wed Nov 15 2023 18:28:18 GMT+0100 (Central European Standard Time)] Network Error getting access token,net not conncted or Error: invalid_grant
+error: [Wed Nov 15 2023 18:30:47 GMT+0100 (Central European Standard Time)] Network Error getting access token,net not conncted or Error: invalid_grant
+error: [Wed Nov 15 2023 18:31:20 GMT+0100 (Central European Standard Time)] Network Error getting access token,net not conncted or Error: invalid_grant
+error: [Wed Nov 15 2023 21:10:08 GMT+0100 (Central European Standard Time)] Network Error getting access token,net not conncted or Error: invalid_grant
+error: [Wed Nov 15 2023 21:49:41 GMT+0100 (Central European Standard Time)] Network Error getting access token,net not conncted or Error: request to https://oauth2.googleapis.com/token failed, reason: getaddrinfo ENOTFOUND oauth2.googleapis.com
+error: [Wed Nov 15 2023 21:49:41 GMT+0100 (Central European Standard Time)Error connecting to the database: querySrv ECONNREFUSED _mongodb._tcp.Cluster0.uzkrp1a.mongodb.net {"code":"ECONNREFUSED","hostname":"_mongodb._tcp.Cluster0.uzkrp1a.mongodb.net","stack":"Error: querySrv ECONNREFUSED _mongodb._tcp.Cluster0.uzkrp1a.mongodb.net\n    at QueryReqWrap.onresolve [as oncomplete] (node:internal/dns/promises:251:17)","syscall":"querySrv"}

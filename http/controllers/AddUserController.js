@@ -66,7 +66,6 @@ const AddUser = async (req, res, next) => {
     } else {
       res.status(200).json({ message: "Account not created successfully.. ", statusCode: 501 });
     }
-    // const users = await collection.find({userID:newUser.userID}).toArray();
 
   }
 

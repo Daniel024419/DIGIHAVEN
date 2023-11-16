@@ -2,14 +2,14 @@ import TopNavBar from "../platform/includes/topNavBar";
 import PlatformFooter from "../platform/includes/platformFooter";
 
 const BookServices = () => {
-	return (
-		<div>
-		< TopNavBar/>
-		<h1> BookServices </h1>
-			
-		< PlatformFooter />
-		</div>
-	)
-}
+  return (
+    <div>
+      <TopNavBar />
+      <h1> BookServices </h1>
 
-export default BookServices
+      <PlatformFooter />
+    </div>
+  );
+};
+
+export default BookServices;

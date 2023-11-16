@@ -4,6 +4,7 @@ import "../../css/platform.css";
 
 import Banner from "./includes/Banner";
 import ServiceCategory from "./includes/ServiceCategory";
+import FilterCategory from "./includes/FilterCategory";
 import ArtisansCard from "./includes/ArtisansCard";
 
 

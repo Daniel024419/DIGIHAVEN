@@ -97,8 +97,4 @@ module.exports = {
     DashboardServicesCancelled: DashboardServicesCancelled,
     DashboardServicesPending: DashboardServicesPending,
 
-
-
-
-
 };
